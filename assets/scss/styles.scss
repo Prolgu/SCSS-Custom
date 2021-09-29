@@ -1,0 +1,20 @@
+@import 'modules/boxSizing';
+//positions
+@import 'modules/positions';
+//paleta de colores
+@import 'modules/paleta';
+//fuente
+@import 'modules/fonts';
+//flex
+@import 'modules/flex';
+//responsive
+@import 'modules/responsive';
+//buttons
+@import 'modules/buttons';
+
+
+
+//el custom.scss en nuestro estilo personalizado para
+//un proyecto en particular.
+//VA SIEMPRE AL FINAL DE TODOS LOS IMPORTS
+@import 'modules/custom';

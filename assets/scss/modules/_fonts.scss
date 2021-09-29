@@ -1,0 +1,16 @@
+$fonts:(
+    arial:(Arial, Helvetica, sans-serif),
+    helvetica:(Helvetica, Arial,sans-serif),
+    overlock:("Overlock", Arial, Helvetica, sans-serif),
+    open-sans:("Open Sans", Arial, Helvetica, sans-serif),
+);
+
+//$prop es lo que está a la derecha del $name
+@each $name, $prop in $fonts {
+    %#{$name} {
+        font-family: #{$prop};
+    }
+    .#{$name} {
+       @extend %#{$name};
+    }
+}

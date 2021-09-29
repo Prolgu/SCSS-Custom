@@ -1,0 +1,23 @@
+//responsive 
+$breakpoints: (
+  'ssm': ( max-width: 360px ),
+  'msm': ( max-width: 390px ),
+  'sm':  ( max-width: 480px ),
+  'xsm': ( max-width: 540px ),
+  'smd': ( max-width: 580px ),
+  'mmd': ( max-width: 680px ),
+  'md':  ( max-width: 780px ),
+  'xmd': ( max-width: 980px ),
+  'slg': ( max-width: 1080px ),
+  'mlg': ( max-width: 1180px ),
+  'lg':  ( max-width: 1280px ),
+  'xlg': ( max-width: 1680px )
+) !default;
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+};

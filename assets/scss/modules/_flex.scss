@@ -1,0 +1,100 @@
+$flex:(
+    flex:flex,
+    i-flex:inline-flex,
+);
+
+//flex-direction
+$flexDirection:(
+    row:row,
+    column:column
+);
+// flex-wrap: nowrap | wrap |
+$flexWrap:(
+    wrap:wrap,
+    noWrap:nowrap,
+);
+
+//justify-content
+$justifyContent: (
+    x-flex-start:flex-start,
+    x-flex-end:flex-end,
+    x-center:center,
+    space-between:space-between,
+    space-around:space-around,
+);
+
+//align-items
+$alignItems:(
+    y-flex-start:flex-start,
+    y-flex-end:flex-end,
+    y-center:center,
+);
+
+//align-self
+$selfStart: (
+	self-start:flex-start,
+    self-end:flex-end,
+    self-center:center,
+    self-baseline:baseline,
+);
+
+//flex
+@each $name, $prop in $flex {
+    %#{$name}{
+        display: $prop;
+    }
+    .#{$name} {
+        @extend %#{$name};
+    }
+};
+
+//flex direction
+@each $name, $prop in $flexDirection {
+    %#{$name}{
+        flex-direction: $prop;
+    }
+    .#{$name} {
+        @extend %#{$name};
+    }
+};
+
+//flex wrap / no-wrap
+@each $name, $prop in $flexWrap {
+    %#{$name}{
+        flex-wrap: $prop;
+    }
+    .#{$name} {
+        @extend %#{$name};
+    }
+};
+
+//justify content
+@each $name, $prop in $justifyContent {
+    %#{$name}{
+        justify-content: $prop;
+    }
+    .#{$name} {
+        @extend %#{$name};
+    }
+};
+
+//align items
+@each $name, $prop in $alignItems {
+    %#{$name}{
+        align-items: $prop;
+    }
+    .#{$name} {
+        @extend %#{$name};
+    }
+};
+
+//align self
+@each $name, $prop in $selfStart {
+    %#{$name}{
+        align-self: $prop;
+    }
+    .#{$name} {
+        @extend %#{$name};
+    }
+};
+

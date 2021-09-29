@@ -1,0 +1,25 @@
+.button {
+    max-width: 243px;
+    width:auto;
+    height:45px;
+    font-size:18px;
+    @extend %white;//color:#fff o color:white
+    @extend %flex; //diplay:flex;
+    @extend %x-center; //justify-content:center;
+    @extend %y-center;//align-items:center;
+    text-decoration: none;
+    &_gold {
+        @extend %bg-gold;//background:c7b56f
+        transition: .35s ease-in-out;
+        &:hover {
+            @extend %bg-gold-light;//background:e3d9b1
+        }
+    }
+    &_center {
+        margin:0 auto;
+    }
+}
+
+.box-content-button {
+    transform:translate3d(0,-25%,0)
+}
